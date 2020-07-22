@@ -1,5 +1,5 @@
 # wordpress-instagram-api
-Connect Wordpress with Insagram Basic API
+Connect Wordpress with Instagram Basic API
 
 ## Basic usage
 
