@@ -9,13 +9,13 @@ Connect Wordpress with Insagram Basic API
 ```php 
 require_once( __DIR__ . '/inc/class-Instagram.php');
 ```
-3. Create app on developers.facebook.com, click add Product -> Instagram Basic Display
+3. Create app on https://developers.facebook.com/, click add Product -> Instagram Basic Display
 4. Go to *Instagram Basic Display -> Basic Display*
 5. Set *Valid OAuth Redirect URIs, Deauthorize Callback URL, Data Deletion Request URL* to your website URL 
-5. Get *Instagram App ID, Instagram App Secret*
-6. Go to *Roles -> Instagram Testers* and add your Instagram account
-7. Open Instagram app, go to Settings and confirm your app
-8. Go to your *functions.php* file and create initial function:
+6. Get *Instagram App ID, Instagram App Secret*
+7. Go to *Roles -> Instagram Testers* and add your Instagram account
+8. Open Instagram app, go to Settings and confirm your app
+9. Go to your *functions.php* file and create initial function:
 ```php
 function init_Instagram() {
     $insta_app_secret = '{YOUR_APP_SECRET}';
@@ -23,14 +23,14 @@ function init_Instagram() {
     $insta_redirect_url = '{YOUR_WEBSITE_URL}';
 }
 ```
-9. Go to: `https://api.instagram.com/oauth/authorize?client_id={YOUR_APP_ID}&redirect_uri={YOUR_WEBSITE_URL}&scope=user_profile,user_media&response_type=code`
-10.Authenticate your Instagram test user by signing into the Authorization Window, then click Authorize to grant your app access to your profile data. Upon success, the page will redirect you to the redirect URI you included in the previous step and append an Authorization Code. For example:
+10. Go to: `https://api.instagram.com/oauth/authorize?client_id={YOUR_APP_ID}&redirect_uri={YOUR_WEBSITE_URL}&scope=user_profile,user_media&response_type=code`
+11.Authenticate your Instagram test user by signing into the Authorization Window, then click Authorize to grant your app access to your profile data. Upon success, the page will redirect you to the redirect URI you included in the previous step and append an Authorization Code. For example:
 
 `https://google.com/?code=AQDp3TtBQQ...#_`
 
 Note that #_ has been appended to the end of the redirect URI, but it is not part of the code itself. Copy the code (without the #_ portion) so you can use it in the next step.
 
-10. Return your *functions.php* and update your `init_Instagram()` function:
+12. Return your *functions.php* and update your `init_Instagram()` function:
 ```php
 function init_Instagram() {
     $insta_app_secret = '{YOUR_APP_SECRET}';
@@ -47,12 +47,12 @@ function init_Instagram() {
 }
 ```
 
-11. Call the `init_Instagram()` function on your website **WARNING: The `init_Instagram()` function should be called only once! **
+13. Call the `init_Instagram()` function on your website **WARNING: The `init_Instagram()` function should be called only once! **
 ```php
 init_Instagram();
 ```
-12. Remove `init_Instagram();` function
-13. Start using Instagram on your website:
+14. Remove `init_Instagram();` function
+15. Start using Instagram on your website:
 ```php
 $instagram = new Instagram();
 
