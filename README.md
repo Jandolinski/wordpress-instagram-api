@@ -24,6 +24,7 @@ function init_Instagram() {
 }
 ```
 10. Go to: `https://api.instagram.com/oauth/authorize?client_id={YOUR_APP_ID}&redirect_uri={YOUR_WEBSITE_URL}&scope=user_profile,user_media&response_type=code`
+
 11.Authenticate your Instagram test user by signing into the Authorization Window, then click Authorize to grant your app access to your profile data. Upon success, the page will redirect you to the redirect URI you included in the previous step and append an Authorization Code. For example:
 
 `https://google.com/?code=AQDp3TtBQQ...#_`
