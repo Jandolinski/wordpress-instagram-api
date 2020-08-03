@@ -75,7 +75,7 @@ $instagram->check_for_token_refresh();
 * e.g. array('id', 'caption', 'media_url', 'permalink');
 * 
 */
-$media = $insta->get_media(array('id', 'media_url', 'permalink'));
+$media = $instagram->get_media(array('id', 'media_url', 'permalink'));
 
 foreach($media as $item) {
     $permalink = $item['permalink'];
